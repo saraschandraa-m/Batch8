@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_setup_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setup your Plan"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/tv_change_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_setup_plan"
+        android:text="You can change the mode anytime in settings"
+        android:textSize="14sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_card_1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tv_change_mode"
+        android:background="@drawable/bg_crect_1">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/pie_chart_img" />
+
+
+        <TextView
+            android:id="@+id/tv_setup_wizard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setup Wizard"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:id="@+id/vw_divider_1"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tv_setup_wizard"
+            android:background="#ffffff" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vw_divider_1"
+            android:text="RECOMMENDED"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

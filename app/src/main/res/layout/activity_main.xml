@@ -10,6 +10,8 @@
         android:id="@+id/tv_setup_plan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Setup your Plan"
         android:textSize="18sp" />
 
@@ -19,6 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_setup_plan"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="You can change the mode anytime in settings"
         android:textSize="14sp" />
 
@@ -28,7 +32,12 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_below="@+id/tv_change_mode"
-        android:background="@drawable/bg_crect_1">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_crect_1"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp">
 
 
         <ImageView

@@ -1,34 +1,20 @@
 package com.appstone.androidbatch8;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity {
 
-    private static final String TAG = "Activity_Main";
+    private static final String TAG = "Activity_Third";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_constraint);
-
+        setContentView(R.layout.activity_third);
         Log.i(TAG, "OnCreate Called");
-        ConstraintLayout setupCard = findViewById(R.id.cl_setup);
-
-        setupCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent secondIntent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(secondIntent);
-            }
-        });
     }
-
 
     @Override
     protected void onStart() {

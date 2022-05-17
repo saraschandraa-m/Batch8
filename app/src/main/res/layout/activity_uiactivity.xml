@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="ui.UIActivity">
+
+
+    <EditText
+        android:id="@+id/et_email_address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+
+    <EditText
+        android:id="@+id/et_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your mobile number"
+        android:inputType="phone"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false" />
+
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

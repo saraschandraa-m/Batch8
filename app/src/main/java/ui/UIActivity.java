@@ -7,10 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.appstone.androidbatch8.R;
 
 public class UIActivity extends AppCompatActivity {
+
+    String EMAIL_STRING = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+            + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,20 @@ public class UIActivity extends AppCompatActivity {
                 String email = etEmailAddress.getText().toString();
                 String mobile = etMobile.getText().toString();
                 String password = etpassword.getText().toString();
+
+
+                if (email.isEmpty()) {
+                    Toast.makeText(UIActivity.this, "Email is empty", Toast.LENGTH_SHORT).show();
+                    return;
+                } else if (!email.matches(EMAIL_STRING)) {
+                    Toast.makeText(UIActivity.this, "Invalid Email", Toast.LENGTH_SHORT).show();
+                    return;
+                } else if (mobile.length() < 10) {
+                    Toast.makeText(UIActivity.this, "Enter a valid mobile number", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
 
                 tvDisplay.setText(email);
             }

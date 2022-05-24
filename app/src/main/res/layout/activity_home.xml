@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context="sharedpref.HomeActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HomeActivity"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

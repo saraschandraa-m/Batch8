@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
         homeIntent.putExtra("EMAIL", email);
         homeIntent.putExtra("PASSWORD", password);
+//        startActivity(homeIntent);
         startActivityForResult(homeIntent, 124);
 //        finish();
     }

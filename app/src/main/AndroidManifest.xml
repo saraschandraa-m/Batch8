@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Batch8">
         <activity
-            android:name="intent.ImplicitIntentActivity"
+            android:name="toolbarmenu.ToolbarActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,13 +20,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="intent.ImplicitIntentActivity"
+            android:exported="false" />
+
+        <activity
             android:name="sharedpref.HomeActivity"
             android:exported="false" />
         <activity
             android:name="sharedpref.LoginActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name="ui.UIActivity"
             android:exported="false" />

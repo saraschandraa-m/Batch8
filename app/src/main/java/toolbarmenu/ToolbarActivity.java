@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +18,9 @@ import android.widget.Toast;
 
 import com.appstone.androidbatch8.R;
 import com.google.android.material.navigation.NavigationView;
+
+import fragments.HomeFragment;
+import sharedpref.HomeActivity;
 
 public class ToolbarActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -93,8 +98,15 @@ public class ToolbarActivity extends AppCompatActivity implements NavigationView
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         mDrawerLayout.closeDrawer(GravityCompat.START);
-        if(item.getItemId() == R.id.menu_logout){
+        if (item.getItemId() == R.id.menu_logout) {
             Toast.makeText(ToolbarActivity.this, "Menu Logout is clicked", Toast.LENGTH_SHORT).show();
+
+//            Intent homeIntent = new Intent(ToolbarActivity.this, HomeActivity.class);
+//            startActivity(homeIntent);
+
+            FragmentTransaction fm = getSupportFragmentManager().beginTransaction();
+            fm.replace(R.id.fl_fragments, new HomeFragment());
+            fm.commit();
         }
         return false;
     }
